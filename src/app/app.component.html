@@ -1,2 +1,10 @@
-<itoggle checked [iconClass]="'fas fa-camera'"></itoggle>
+<itoggle [(ngModel)]="isChecked" [disabled]="checkedEvent">
+  <i class="fa fa-check" *ngIf="isChecked"></i>
+  <i class="fa fa-adjust" *ngIf="!isChecked"></i>
+</itoggle>
+
+isChecked {{isChecked}}
+checkedEvent {{checkedEvent}}
+<input type="checkbox" [(ngModel)]="checkedEvent" />
+
 
